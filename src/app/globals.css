@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Deutschlander';
+  src: url('/fonts/deutschlander.woff2') format('woff2'),
+       url('/fonts/deutschlander.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Monument Extended';
+  src: url('/fonts/pp-monument-extended-black.woff2') format('woff2'),
+       url('/fonts/pp-monument-extended-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  /* Light mode (default) - Original teal theme */
+  :root {
+    --color-primary: #0D4A4A;
+    --color-primary-container: #BCEBC4;
+    --color-background: #F8FDFB;
+    --color-surface: #FFFFFF;
+    --color-surface-variant: #E8F5EC;
+    --color-text: #061E1E;
+    --color-text-secondary: #3D5A5A;
+    --color-border: #B8D4C8;
+    --color-error: #BA1A1A;
+  }
+
+  /* Dark mode - Brand Colors */
+  .dark {
+    --color-primary: #BCEBC4;
+    --color-primary-container: #0A3131;
+    --color-background: #061E1E;
+    --color-surface: #0A3131;
+    --color-surface-variant: #041616;
+    --color-text: #E2FFE7;
+    --color-text-secondary: #BCEBC4;
+    --color-border: #0A3131;
+    --color-error: #FFB4AB;
+  }
+
+  /* Base html/body styles */
+  html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    width: 100%;
+  }
+
+  body {
+    @apply bg-island-bg-light dark:bg-island-bg-dark;
+    @apply text-island-text-light dark:text-island-text-dark;
+    @apply transition-colors duration-300;
+    min-height: 100vh;
+    width: 100%;
+  }
+}
+
+@layer components {
+  /* Card component */
+  .card {
+    @apply bg-island-surface-light dark:bg-island-surface-dark;
+    @apply border border-island-outline-variant-light dark:border-island-outline-variant-dark;
+    @apply rounded-lg shadow-lg;
+    @apply transition-all duration-300;
+  }
+
+  /* Button primary */
+  .btn-primary {
+    @apply bg-island-blue dark:bg-island-sky-blue;
+    @apply text-white dark:text-island-dark-teal;
+    @apply px-6 py-3 rounded-lg;
+    @apply font-semibold;
+    @apply hover:opacity-90 active:opacity-80;
+    @apply transition-all duration-200;
+    @apply shadow-lg hover:shadow-xl;
+  }
+
+  /* Button secondary */
+  .btn-secondary {
+    @apply bg-island-light-blue dark:bg-island-secondary-dark;
+    @apply text-island-blue dark:text-island-sky-blue;
+    @apply px-6 py-3 rounded-lg;
+    @apply font-semibold;
+    @apply hover:opacity-90 active:opacity-80;
+    @apply transition-all duration-200;
+    @apply shadow-lg hover:shadow-xl;
+  }
+}
+
+@layer utilities {
+  /* Logo tint - white logo to teal in light mode, mint in dark mode */
+  .logo-tint {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(30%) saturate(700%) hue-rotate(130deg) brightness(95%) contrast(95%);
+  }
+
+  .dark .logo-tint {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(15%) saturate(300%) hue-rotate(80deg) brightness(98%) contrast(95%);
+  }
+
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Disable iOS/Safari auto-detection of addresses, dates, etc. */
+  .no-format-detection a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    pointer-events: none !important;
+  }
+
+  /* Animations */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes scroll-partners {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite;
+  }
+
+  .animate-scroll-partners {
+    animation: scroll-partners 8s linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    .animate-scroll-partners {
+      animation: scroll-partners 30s linear infinite;
+    }
+  }
+
+  @keyframes scroll-testimonials {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+
+  @keyframes scroll-testimonials-reverse {
+    0% {
+      transform: translateX(-33.333%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-scroll-testimonials {
+    animation: scroll-testimonials 40s linear infinite;
+  }
+
+  .animate-scroll-testimonials-reverse {
+    animation: scroll-testimonials-reverse 40s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  /* Delay utilities for staggered animations */
+  .delay-75 {
+    animation-delay: 75ms;
+  }
+
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  /* Perspective for 3D effects */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-island-blue to-island-secondary dark:from-island-sky-blue dark:to-island-light-blue;
+    @apply bg-clip-text text-transparent;
+  }
+
+  /* Brand fonts with proper styling */
+  .font-brand-display {
+    font-family: 'Deutschlander', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-brand-heading {
+    font-family: 'PP Monument Extended', sans-serif;
+    font-weight: 900;
+  }
+}
