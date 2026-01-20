@@ -29,3 +29,14 @@ src/
 ├── components/    # React components
 └── lib/           # Utilities
 ```
+
+## Contributing
+
+Before pushing, ensure your code passes CI checks:
+
+```bash
+pnpm lint           # Run ESLint
+pnpm format:check   # Check formatting
+pnpm format:write   # Fix formatting
+pnpm build          # Verify build
+```

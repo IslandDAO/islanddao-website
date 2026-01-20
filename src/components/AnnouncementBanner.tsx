@@ -10,10 +10,10 @@ interface AnnouncementBannerProps {
 }
 
 export function AnnouncementBanner({
-  message = "🎉 New events coming soon! Stay tuned for exciting announcements in 2025.",
-  link = "#events",
+  message = '🎉 New events coming soon! Stay tuned for exciting announcements in 2025.',
+  link = '#events',
   dismissible = true,
-  onDismiss
+  onDismiss,
 }: AnnouncementBannerProps) {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -59,7 +59,12 @@ export function AnnouncementBanner({
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
           </div>
@@ -71,7 +76,12 @@ export function AnnouncementBanner({
               aria-label="Dismiss announcement"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           )}

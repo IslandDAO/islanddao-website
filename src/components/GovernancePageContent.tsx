@@ -11,7 +11,7 @@ import {
   FileText,
   Lock,
   Handshake,
-  Zap
+  Zap,
 } from 'lucide-react';
 
 // ============================================
@@ -38,8 +38,8 @@ function HeroSection() {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-island-tertiary dark:text-island-text-dark/90 max-w-3xl mx-auto font-medium leading-relaxed">
-            IslandDAO is governed by its community through on-chain voting powered by Realms.
-            Every $ISLAND token holder has a voice in decisions that shape our direction, from treasury
+            IslandDAO is governed by its community through on-chain voting powered by Realms. Every
+            $ISLAND token holder has a voice in decisions that shape our direction, from treasury
             allocation to event planning and strategic partnerships.
           </p>
         </div>
@@ -114,10 +114,18 @@ function DAOEthosSection() {
               {/* Intro text */}
               <div className="max-w-4xl mx-auto text-center mb-12">
                 <p className="text-lg md:text-xl text-island-tertiary dark:text-island-text-dark/90 leading-relaxed mb-6">
-                  IslandDAO is a community-first DAO built to foster worldwide participation and collaboration through on-chain tools.
+                  IslandDAO is a community-first DAO built to foster worldwide participation and
+                  collaboration through on-chain tools.
                 </p>
                 <p className="text-island-tertiary dark:text-island-text-dark/80 leading-relaxed mb-6">
-                  We are proud to be among the most active DAOs on Solana with countless contributions to Solana&apos;s governance scene. We operate on a hybrid governance structure, using token based governance, Sowellian Governance and Futarchy. All decisions are powered by our native <span className="text-island-blue dark:text-island-sky-blue font-semibold">$ISLAND</span> token.
+                  We are proud to be among the most active DAOs on Solana with countless
+                  contributions to Solana&apos;s governance scene. We operate on a hybrid governance
+                  structure, using token based governance, Sowellian Governance and Futarchy. All
+                  decisions are powered by our native{' '}
+                  <span className="text-island-blue dark:text-island-sky-blue font-semibold">
+                    $ISLAND
+                  </span>{' '}
+                  token.
                 </p>
               </div>
 
@@ -131,7 +139,10 @@ function DAOEthosSection() {
               {/* Ethos grid */}
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {daoEthosItems.map((item, index) => (
-                  <div key={index} className="text-center p-6 rounded-xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700">
+                  <div
+                    key={index}
+                    className="text-center p-6 rounded-xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700"
+                  >
                     <div className="w-12 h-12 rounded-xl bg-island-blue/10 dark:bg-island-sky-blue/20 flex items-center justify-center mx-auto mb-4">
                       <item.icon className="w-6 h-6 text-island-blue dark:text-island-sky-blue" />
                     </div>
@@ -159,7 +170,8 @@ const whyParticipateReasons = [
   {
     icon: Handshake,
     title: 'Become One of Us',
-    description: 'Taking part in governance is the easiest yet best way to become an IslandDAO member.',
+    description:
+      'Taking part in governance is the easiest yet best way to become an IslandDAO member.',
   },
   {
     icon: Target,
@@ -169,7 +181,8 @@ const whyParticipateReasons = [
   {
     icon: Wallet,
     title: 'Earn',
-    description: 'IslandDAO\'s open-participation model lets holders decide how our treasury is utilized.',
+    description:
+      "IslandDAO's open-participation model lets holders decide how our treasury is utilized.",
   },
   {
     icon: Zap,
@@ -190,9 +203,7 @@ function WhyParticipateSection() {
             </span>
           </div>
           <h2 className="font-brand-heading text-3xl md:text-5xl mb-6 uppercase">
-            <span className="text-island-blue dark:text-island-text-dark">
-              Why Participate?
-            </span>
+            <span className="text-island-blue dark:text-island-text-dark">Why Participate?</span>
           </h2>
           <p className="text-lg text-island-tertiary dark:text-island-text-dark/90 max-w-2xl mx-auto">
             Become one of us • Shape the Future • Earn • Learn
@@ -202,10 +213,7 @@ function WhyParticipateSection() {
         {/* Reasons grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {whyParticipateReasons.map((reason, index) => (
-            <div
-              key={index}
-              className="group relative"
-            >
+            <div key={index} className="group relative">
               {/* Glow effect */}
               <div className="absolute -inset-1 bg-gradient-to-br from-island-blue via-island-secondary to-island-light-blue dark:from-island-sky-blue dark:via-island-blue dark:to-island-light-blue rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
 
@@ -319,8 +327,18 @@ function SuccessfulProposalsSection() {
                 onClick={prevSlide}
                 className="p-2 rounded-full bg-white/20 dark:bg-white/10 hover:bg-white/30 transition-all"
               >
-                <svg className="w-5 h-5 text-island-blue dark:text-island-sky-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-5 h-5 text-island-blue dark:text-island-sky-blue"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
               </button>
               <div className="flex items-center gap-2">
@@ -340,8 +358,18 @@ function SuccessfulProposalsSection() {
                 onClick={nextSlide}
                 className="p-2 rounded-full bg-white/20 dark:bg-white/10 hover:bg-white/30 transition-all"
               >
-                <svg className="w-5 h-5 text-island-blue dark:text-island-sky-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-5 h-5 text-island-blue dark:text-island-sky-blue"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
             </div>
@@ -373,8 +401,9 @@ const participationSteps = [
   },
   {
     step: 4,
-    title: 'Vote and Shape IslandDAO\'s Future',
-    description: 'Cast your vote on proposals that matter to you and help guide the direction of the DAO.',
+    title: "Vote and Shape IslandDAO's Future",
+    description:
+      'Cast your vote on proposals that matter to you and help guide the direction of the DAO.',
   },
 ];
 
@@ -390,9 +419,7 @@ function HowToParticipateSection() {
             </span>
           </div>
           <h2 className="font-brand-heading text-3xl md:text-5xl mb-6 uppercase">
-            <span className="text-island-blue dark:text-island-text-dark">
-              How to Participate
-            </span>
+            <span className="text-island-blue dark:text-island-text-dark">How to Participate</span>
           </h2>
           <p className="text-lg text-island-tertiary dark:text-island-text-dark/90 max-w-2xl mx-auto">
             Follow these steps to start participating in IslandDAO governance.
@@ -406,10 +433,7 @@ function HowToParticipateSection() {
             <div className="absolute left-6 top-[3.5rem] bottom-[5rem] w-0.5 bg-gradient-to-b from-island-blue via-island-secondary to-island-light-blue dark:from-island-sky-blue dark:via-island-blue dark:to-island-light-blue"></div>
 
             {participationSteps.map((step) => (
-              <div
-                key={step.step}
-                className="relative flex items-center gap-6 mb-8"
-              >
+              <div key={step.step} className="relative flex items-center gap-6 mb-8">
                 {/* Step number */}
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-island-blue dark:bg-island-sky-blue text-white dark:text-gray-900 flex items-center justify-center font-bold text-lg shadow-lg z-10">
                   {step.step}
@@ -528,7 +552,9 @@ function ProposalCard({ proposal }: { proposal: Proposal }) {
           <span className="px-3 py-1 rounded-full bg-white/30 dark:bg-white/10 text-island-tertiary dark:text-island-text-dark/80 text-xs font-semibold">
             {proposal.type}
           </span>
-          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${statusColors[proposal.status]}`}>
+          <span
+            className={`px-3 py-1 rounded-full text-xs font-semibold ${statusColors[proposal.status]}`}
+          >
             {statusLabels[proposal.status]}
           </span>
         </div>
@@ -568,7 +594,12 @@ function ProposalCard({ proposal }: { proposal: Proposal }) {
         <div className="mt-4 pt-4 border-t border-gray-200 dark:border-white/10">
           <span className="text-sm font-semibold text-island-blue dark:text-island-sky-blue group-hover:underline flex items-center">
             View Proposal Details
-            <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </span>
@@ -579,8 +610,8 @@ function ProposalCard({ proposal }: { proposal: Proposal }) {
 }
 
 function ProposalsListSection() {
-  const activeProposals = allProposals.filter(p => p.status === 'active');
-  const pastProposals = allProposals.filter(p => p.status !== 'active');
+  const activeProposals = allProposals.filter((p) => p.status === 'active');
+  const pastProposals = allProposals.filter((p) => p.status !== 'active');
 
   return (
     <section className="py-24 relative">

@@ -74,13 +74,23 @@ export function HeroOverlay({ topOffset }: HeroOverlayProps) {
   const slide = slides[currentSlide];
 
   return (
-    <section id="home-hero-overlay" className="relative flex flex-col items-center" style={{ height: `calc(100vh - ${topOffset}px)` }}>
+    <section
+      id="home-hero-overlay"
+      className="relative flex flex-col items-center"
+      style={{ height: `calc(100vh - ${topOffset}px)` }}
+    >
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)] via-[var(--color-primary-container)] to-[var(--color-surface-variant)] opacity-10 animate-gradient"></div>
 
       {/* Floating orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl opacity-20 animate-float" style={{ backgroundColor: 'var(--color-primary)' }}></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full blur-3xl opacity-20 animate-float delay-100" style={{ backgroundColor: 'var(--color-primary-container)' }}></div>
+      <div
+        className="absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl opacity-20 animate-float"
+        style={{ backgroundColor: 'var(--color-primary)' }}
+      ></div>
+      <div
+        className="absolute bottom-20 right-10 w-96 h-96 rounded-full blur-3xl opacity-20 animate-float delay-100"
+        style={{ backgroundColor: 'var(--color-primary-container)' }}
+      ></div>
 
       {/* Slideshow container */}
       <div className="inset-0 max-w-[1920px] w-full mx-auto p-6 md:p-12 max-h-[800px] h-full relative">
@@ -113,13 +123,21 @@ export function HeroOverlay({ topOffset }: HeroOverlayProps) {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  {slide.tripName}
-                </h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">{slide.tripName}</h2>
                 <p className="text-white/80 text-lg flex items-center gap-2">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
                   </svg>
                   {slide.country}
                 </p>
@@ -131,7 +149,9 @@ export function HeroOverlay({ topOffset }: HeroOverlayProps) {
           {slides.length > 1 && (
             <div className="absolute bottom-6 right-6 md:right-8 flex items-center gap-3">
               <button
-                onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+                onClick={() =>
+                  setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+                }
                 className="text-white/70 hover:text-white transition-colors text-lg font-medium"
                 aria-label="Previous slide"
               >
@@ -157,9 +177,7 @@ export function HeroOverlay({ topOffset }: HeroOverlayProps) {
         <span className="block">
           Web3 Native <span className="italic font-light gradient-text">Network State,</span>
         </span>
-        <span className="block gradient-text">
-          Solana&rsquo;s Most Dedicated Power Users.
-        </span>
+        <span className="block gradient-text">Solana&rsquo;s Most Dedicated Power Users.</span>
       </h1>
     </section>
   );

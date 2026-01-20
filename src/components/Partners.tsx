@@ -1,12 +1,12 @@
 'use client';
 
 const partners = [
-  { img: "/images/partners/realms.png", name: "Realms", link: "https://www.realms.today" },
-  { img: "/images/partners/solana.png", name: "Solana Foundation", link: "https://solana.com" },
-  { img: "/images/partners/metaplex.png", name: "Metaplex", link: "https://www.metaplex.com/" },
-  { img: "/images/partners/solfare.png", name: "Solflare", link: "https://www.solflare.com/" },
-  { img: "/images/partners/pubkey.png", name: "Pubkey", link: "https://pubkey.islanddao.org" },
-  { img: "/images/partners/monkedao.png", name: "MonkeDAO", link: "https://monkedao.io/" },
+  { img: '/images/partners/realms.png', name: 'Realms', link: 'https://www.realms.today' },
+  { img: '/images/partners/solana.png', name: 'Solana Foundation', link: 'https://solana.com' },
+  { img: '/images/partners/metaplex.png', name: 'Metaplex', link: 'https://www.metaplex.com/' },
+  { img: '/images/partners/solfare.png', name: 'Solflare', link: 'https://www.solflare.com/' },
+  { img: '/images/partners/pubkey.png', name: 'Pubkey', link: 'https://pubkey.islanddao.org' },
+  { img: '/images/partners/monkedao.png', name: 'MonkeDAO', link: 'https://monkedao.io/' },
 ];
 
 export function Partners() {
@@ -38,11 +38,7 @@ export function Partners() {
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-2 p-3 rounded-2xl bg-white dark:bg-island-surface-dark shadow-md hover:shadow-lg hover:scale-105 transition-all"
             >
-              <img
-                src={partner.img}
-                alt={partner.name}
-                className="w-10 h-10 object-contain"
-              />
+              <img src={partner.img} alt={partner.name} className="w-10 h-10 object-contain" />
               <span className="text-xs font-medium text-island-text-light dark:text-island-text-dark text-center leading-tight">
                 {partner.name}
               </span>

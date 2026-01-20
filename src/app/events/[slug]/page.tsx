@@ -1,22 +1,25 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { PastEventPageContent } from "@/components/PastEventPageContent";
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { PastEventPageContent } from '@/components/PastEventPageContent';
 
 // Event data for past events
-const pastEvents: Record<string, {
-  title: string;
-  subtitle: string;
-  date: string;
-  location: string;
-  country: string;
-  heroImage: string;
-  description: string;
-  highlights: string[];
-  stats: { label: string; value: string }[];
-  galleryImages: string[];
-}> = {
+const pastEvents: Record<
+  string,
+  {
+    title: string;
+    subtitle: string;
+    date: string;
+    location: string;
+    country: string;
+    heroImage: string;
+    description: string;
+    highlights: string[];
+    stats: { label: string; value: string }[];
+    galleryImages: string[];
+  }
+> = {
   '2024-crete': {
     title: 'IslandDAO Crete',
     subtitle: 'IslandDAO v1',
@@ -24,7 +27,8 @@ const pastEvents: Record<string, {
     location: 'Crete',
     country: 'Greece',
     heroImage: '/images/hero-images/v1-001.jpg',
-    description: 'IslandDAO v1 was the first official gathering, bringing builders, founders, and creators from around the world to Crete for a month of co-working and community. Weekly schedules mixed citizen-led workshops with group adventures like jet skiing and beach days, building connections on-chain and IRL.',
+    description:
+      'IslandDAO v1 was the first official gathering, bringing builders, founders, and creators from around the world to Crete for a month of co-working and community. Weekly schedules mixed citizen-led workshops with group adventures like jet skiing and beach days, building connections on-chain and IRL.',
     highlights: [
       'First-ever month-long IslandDAO event',
       'Global group of builders and ecosystem contributors',
@@ -78,7 +82,8 @@ const pastEvents: Record<string, {
     location: 'Koh Samui',
     country: 'Thailand',
     heroImage: '/images/hero-images/v2-group.jpg',
-    description: 'Hosted right after Breakpoint 2024, IslandDAO v2 brought Solana contributors to a branded villa overlooking the ocean for a month of hardcore building. Structured feedback sessions and office hours kept projects moving, while happy hours, boat trips, and ATV rides kept the vibes right.',
+    description:
+      'Hosted right after Breakpoint 2024, IslandDAO v2 brought Solana contributors to a branded villa overlooking the ocean for a month of hardcore building. Structured feedback sessions and office hours kept projects moving, while happy hours, boat trips, and ATV rides kept the vibes right.',
     highlights: [
       'Largest IslandDAO gathering to date, with a broad cross-section of Solana ecosystem contributors',
       'Produced multiple hackathon-winning projects',
@@ -134,7 +139,8 @@ const pastEvents: Record<string, {
     location: 'Mykonos',
     country: 'Greece',
     heroImage: '/images/hero-images/v3-003.jpg',
-    description: 'IslandDAO v3 brought the event on-chain. Citizens used the IslandDAO app and PERKS NFT to check into workshops, earn rewards, and vote on decisions throughout the month. Programming included a hackathon with Metaplex, a weekly Launchathon that produced 4 token launches, and daily wellness sessions, plus barbecues and beach days.',
+    description:
+      'IslandDAO v3 brought the event on-chain. Citizens used the IslandDAO app and PERKS NFT to check into workshops, earn rewards, and vote on decisions throughout the month. Programming included a hackathon with Metaplex, a weekly Launchathon that produced 4 token launches, and daily wellness sessions, plus barbecues and beach days.',
     highlights: [
       'Hosted a hackathon with prizes in partnership with Metaplex',
       'Utilized the IslandDAO app for on-chain voting, activity check-ins, and rewards',
@@ -205,7 +211,11 @@ export function generateStaticParams() {
 }
 
 // Generate dynamic metadata based on the event
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
   const event = pastEvents[slug];
 

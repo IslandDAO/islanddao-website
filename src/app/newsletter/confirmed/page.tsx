@@ -21,13 +21,11 @@ export default function NewsletterConfirmedPage() {
             </svg>
           </div>
 
-          <h1 className="text-2xl font-bold gradient-text mb-4">
-            Subscription Confirmed!
-          </h1>
+          <h1 className="text-2xl font-bold gradient-text mb-4">Subscription Confirmed!</h1>
 
           <p className="text-island-tertiary dark:text-island-text-dark/80 mb-6">
-            You&apos;re now subscribed to the IslandDAO newsletter. We&apos;ll keep you
-            updated on upcoming events, governance updates, and community news.
+            You&apos;re now subscribed to the IslandDAO newsletter. We&apos;ll keep you updated on
+            upcoming events, governance updates, and community news.
           </p>
 
           <Link

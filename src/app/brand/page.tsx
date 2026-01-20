@@ -1,8 +1,8 @@
 'use client';
 
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { BrandGuidelinesPageContent } from "@/components/BrandGuidelinesPageContent";
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { BrandGuidelinesPageContent } from '@/components/BrandGuidelinesPageContent';
 
 export default function BrandPage() {
   return (

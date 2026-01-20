@@ -1,18 +1,21 @@
-import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { GovernancePageContent } from "@/components/GovernancePageContent";
+import type { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { GovernancePageContent } from '@/components/GovernancePageContent';
 
 export const metadata: Metadata = {
-  title: "Governance",
-  description: "Participate in IslandDAO's on-chain governance. Vote on proposals, shape community decisions, and help guide the future of our network state through transparent, token-based voting.",
+  title: 'Governance',
+  description:
+    "Participate in IslandDAO's on-chain governance. Vote on proposals, shape community decisions, and help guide the future of our network state through transparent, token-based voting.",
   openGraph: {
-    title: "Governance | IslandDAO",
-    description: "Participate in IslandDAO's on-chain governance. Vote on proposals, shape community decisions, and help guide the future of our network state.",
+    title: 'Governance | IslandDAO',
+    description:
+      "Participate in IslandDAO's on-chain governance. Vote on proposals, shape community decisions, and help guide the future of our network state.",
   },
   twitter: {
-    title: "Governance | IslandDAO",
-    description: "Participate in IslandDAO's on-chain governance and help shape the future of our network state.",
+    title: 'Governance | IslandDAO',
+    description:
+      "Participate in IslandDAO's on-chain governance and help shape the future of our network state.",
   },
 };
 
