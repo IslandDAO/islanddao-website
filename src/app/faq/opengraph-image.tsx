@@ -16,97 +16,90 @@ export default async function Image() {
   const logoBase64 = `data:image/png;base64,${logoData.toString('base64')}`;
 
   return new ImageResponse(
-    (
+    <div
+      style={{
+        background: '#0A3131',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+      }}
+    >
       <div
         style={{
-          background: '#0A3131',
-          width: '100%',
-          height: '100%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background:
+            'radial-gradient(circle at 30% 70%, rgba(188, 235, 196, 0.08) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(226, 255, 231, 0.05) 0%, transparent 50%)',
+          display: 'flex',
+        }}
+      />
+
+      <div
+        style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          position: 'relative',
+          zIndex: 10,
         }}
       >
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'radial-gradient(circle at 30% 70%, rgba(188, 235, 196, 0.08) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(226, 255, 231, 0.05) 0%, transparent 50%)',
-            display: 'flex',
-          }}
-        />
+        <img src={logoBase64} alt="IslandDAO" width={80} height={80} style={{ marginBottom: 32 }} />
 
         <div
           style={{
+            fontSize: 64,
+            fontWeight: 800,
+            color: '#E2FFE7',
+            letterSpacing: '-1px',
+            marginBottom: 16,
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 10,
           }}
         >
-          <img
-            src={logoBase64}
-            alt="IslandDAO"
-            width={80}
-            height={80}
-            style={{ marginBottom: 32 }}
-          />
-
-          <div
-            style={{
-              fontSize: 64,
-              fontWeight: 800,
-              color: '#E2FFE7',
-              letterSpacing: '-1px',
-              marginBottom: 16,
-              display: 'flex',
-            }}
-          >
-            FAQ
-          </div>
-
-          <div
-            style={{
-              fontSize: 28,
-              color: '#BCEBC4',
-              fontWeight: 600,
-              marginBottom: 24,
-              display: 'flex',
-            }}
-          >
-            Frequently Asked Questions
-          </div>
-
-          <div
-            style={{
-              fontSize: 22,
-              color: 'rgba(226, 255, 231, 0.8)',
-              display: 'flex',
-            }}
-          >
-            Everything you need to know about IslandDAO
-          </div>
+          FAQ
         </div>
 
         <div
           style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: 6,
-            background: 'linear-gradient(90deg, #061E1E, #BCEBC4, #061E1E)',
+            fontSize: 28,
+            color: '#BCEBC4',
+            fontWeight: 600,
+            marginBottom: 24,
             display: 'flex',
           }}
-        />
+        >
+          Frequently Asked Questions
+        </div>
+
+        <div
+          style={{
+            fontSize: 22,
+            color: 'rgba(226, 255, 231, 0.8)',
+            display: 'flex',
+          }}
+        >
+          Everything you need to know about IslandDAO
+        </div>
       </div>
-    ),
+
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: 6,
+          background: 'linear-gradient(90deg, #061E1E, #BCEBC4, #061E1E)',
+          display: 'flex',
+        }}
+      />
+    </div>,
     { ...size }
   );
 }

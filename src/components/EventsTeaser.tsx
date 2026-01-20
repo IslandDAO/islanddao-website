@@ -29,7 +29,7 @@ const events: Event[] = [
     date: 'Oct-Nov 2026',
     image: '/images/brazil-sm.jpg',
     announced: false,
-  }
+  },
 ];
 
 function EventCard({ event }: { event: Event }) {
@@ -115,9 +115,24 @@ function EventCard({ event }: { event: Event }) {
           {event.location && (
             <div className="flex items-center text-island-text-light/70 dark:text-island-text-dark/70 mb-4">
               <div className="w-7 h-7 rounded-full bg-island-blue/10 dark:bg-island-sky-blue/10 flex items-center justify-center mr-2 flex-shrink-0">
-                <svg className="w-4 h-4 text-island-blue dark:text-island-sky-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                <svg
+                  className="w-4 h-4 text-island-blue dark:text-island-sky-blue"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
                 </svg>
               </div>
               <span className="text-sm font-medium">{event.location}</span>
@@ -192,12 +207,17 @@ export function EventsTeaser() {
         </div>
 
         {/* Events grid - dynamic columns based on event count, max 4 */}
-        <div className={`grid gap-8 max-w-5xl mx-auto ${
-          events.length === 1 ? 'max-w-md' :
-          events.length === 2 ? 'md:grid-cols-2' :
-          events.length === 3 ? 'md:grid-cols-2 lg:grid-cols-3 max-w-6xl' :
-          'md:grid-cols-2 lg:grid-cols-4 max-w-7xl'
-        }`}>
+        <div
+          className={`grid gap-8 max-w-5xl mx-auto ${
+            events.length === 1
+              ? 'max-w-md'
+              : events.length === 2
+                ? 'md:grid-cols-2'
+                : events.length === 3
+                  ? 'md:grid-cols-2 lg:grid-cols-3 max-w-6xl'
+                  : 'md:grid-cols-2 lg:grid-cols-4 max-w-7xl'
+          }`}
+        >
           {events.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
@@ -207,7 +227,9 @@ export function EventsTeaser() {
         <div className="text-center mt-16">
           <div className="inline-block w-full max-w-xl">
             <div className="bg-white dark:bg-island-surface-dark rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
-              <h3 className="text-2xl font-bold text-island-blue dark:text-island-sky-blue mb-2">Register Your Interest</h3>
+              <h3 className="text-2xl font-bold text-island-blue dark:text-island-sky-blue mb-2">
+                Register Your Interest
+              </h3>
               <p className="text-lg text-island-text-light/70 dark:text-island-text-dark/70 mb-6">
                 Be the first to know when registrations open
               </p>
@@ -216,7 +238,12 @@ export function EventsTeaser() {
                 <div className="flex flex-col items-center justify-center gap-2 text-green-600 dark:text-green-400 font-medium py-4">
                   <div className="flex items-center gap-2">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                     <span>Thanks for subscribing!</span>
                   </div>

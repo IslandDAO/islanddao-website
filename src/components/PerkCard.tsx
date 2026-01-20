@@ -62,9 +62,11 @@ export function PerkCard({ name, perkTitle, perk, image }: PerkCardProps) {
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
-
         {/* Perk image */}
-        <motion.div layoutId={`image-${name}`} className="aspect-square rounded-xl mb-3 relative overflow-hidden">
+        <motion.div
+          layoutId={`image-${name}`}
+          className="aspect-square rounded-xl mb-3 relative overflow-hidden"
+        >
           {/* Light mode background */}
           <img
             src="/assets/avatar-backgrounds/light-avatar-bg-green.png"
@@ -78,11 +80,7 @@ export function PerkCard({ name, perkTitle, perk, image }: PerkCardProps) {
             className="absolute inset-0 w-full h-full object-cover hidden dark:block"
           />
           <div className="relative w-full h-full">
-            <img
-              src={image}
-              alt={name}
-              className="w-full h-full object-contain drop-shadow-lg"
-            />
+            <img src={image} alt={name} className="w-full h-full object-contain drop-shadow-lg" />
           </div>
         </motion.div>
 
@@ -109,7 +107,10 @@ export function PerkCard({ name, perkTitle, perk, image }: PerkCardProps) {
             />
 
             {/* Expanded card */}
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={handleClose}>
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center p-4"
+              onClick={handleClose}
+            >
               <motion.div
                 layoutId={`card-${name}`}
                 className="relative w-full max-w-md rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700 p-6 shadow-xl"
@@ -121,12 +122,20 @@ export function PerkCard({ name, perkTitle, perk, image }: PerkCardProps) {
                   className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
 
                 {/* Expanded image */}
-                <motion.div layoutId={`image-${name}`} className="aspect-square rounded-2xl mb-4 relative overflow-hidden max-w-[280px] mx-auto">
+                <motion.div
+                  layoutId={`image-${name}`}
+                  className="aspect-square rounded-2xl mb-4 relative overflow-hidden max-w-[280px] mx-auto"
+                >
                   {/* Light mode background */}
                   <img
                     src="/assets/avatar-backgrounds/light-avatar-bg-green.png"

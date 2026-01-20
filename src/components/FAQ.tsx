@@ -9,29 +9,29 @@ const faqs = [
       "IslandDAO is a Network State of Web3 power users where community comes first and decisions are made together. Originally founded as Dean's List in 2022, we evolved from providing feedback services into one of Solana's most active DAOs. Today we focus on four pillars: Events (month-long coworking experiences in paradise locations), Governance (hybrid decision-making), Community (a global network of builders), and Mission (fostering worldwide participation in decentralized organizations).",
   },
   {
-    question: "How can I join the community?",
+    question: 'How can I join the community?',
     answer:
       "Start by getting an IslandDAO NFT - it's your gateway to the community and events. You can purchase one on Magic Eden or other Solana NFT marketplaces. Once you have your NFT, join our Discord to connect with fellow citizens, and follow us on Twitter/X to stay updated with the latest news and event announcements.",
   },
   {
-    question: "What are the benefits of joining the community?",
+    question: 'What are the benefits of joining the community?',
     answer:
       "As an IslandDAO citizen, you gain access to exclusive month-long coworking events in stunning locations worldwide. You can participate in governance and help shape the DAO's future. You'll join a global network of Web3 builders and connect with regional communities including IslandDAO NG (Nigeria) and IslandDAO BR (Brazil). Members also enjoy unique perks tied to their NFT animals and opportunities to learn, collaborate, and grow in the Web3 space.",
   },
   {
-    question: "How do I participate in governance?",
+    question: 'How do I participate in governance?',
     answer:
       "IslandDAO uses a hybrid governance structure combining token-based voting and Sowellian Governance. To participate, connect your wallet on our Realms governance portal where you can vote on proposals, create new initiatives, and help shape IslandDAO's future. By participating, you become one of us, earn rewards, and learn about innovative governance models.",
   },
   {
-    question: "What is the IslandDAO NFT?",
+    question: 'What is the IslandDAO NFT?',
     answer:
-      "Your IslandDAO NFT is your gateway to the community and events. It unlocks access to our exclusive coworking experiences, governance participation, and member-only perks. Each NFT features a unique animal with its own traits and benefits. To attend events, simply hold your NFT and submit an application telling us how you would like to spend your time on the island.",
+      'Your IslandDAO NFT is your gateway to the community and events. It unlocks access to our exclusive coworking experiences, governance participation, and member-only perks. Each NFT features a unique animal with its own traits and benefits. To attend events, simply hold your NFT and submit an application telling us how you would like to spend your time on the island.',
   },
   {
-    question: "When are the upcoming events?",
+    question: 'When are the upcoming events?',
     answer:
-      "We have two events planned for 2026: IslandDAO v4 Thailand in Ko Samui (June 2026) and IslandDAO v5 Brazil in Florianópolis (Oct-Nov 2026). Our past events include IslandDAO v3 Mykonos (September 2025), IslandDAO v2 Ko Samui (October 2024), and IslandDAO v1 Crete (June 2024). Check our Events page for details and follow our socials to be the first to know when applications open.",
+      'We have two events planned for 2026: IslandDAO v4 Thailand in Ko Samui (June 2026) and IslandDAO v5 Brazil in Florianópolis (Oct-Nov 2026). Our past events include IslandDAO v3 Mykonos (September 2025), IslandDAO v2 Ko Samui (October 2024), and IslandDAO v1 Crete (June 2024). Check our Events page for details and follow our socials to be the first to know when applications open.',
   },
 ];
 
@@ -49,18 +49,22 @@ function FAQItem({ question, answer, isOpen, onClick }: FAQItemProps) {
         onClick={onClick}
         className="w-full py-6 flex justify-between items-center text-left group"
       >
-        <span className={`text-lg font-semibold pr-8 transition-colors ${
-          isOpen
-            ? 'text-island-blue dark:text-island-sky-blue'
-            : 'text-island-text-light dark:text-island-text-dark group-hover:text-island-blue dark:group-hover:text-island-sky-blue'
-        }`}>
+        <span
+          className={`text-lg font-semibold pr-8 transition-colors ${
+            isOpen
+              ? 'text-island-blue dark:text-island-sky-blue'
+              : 'text-island-text-light dark:text-island-text-dark group-hover:text-island-blue dark:group-hover:text-island-sky-blue'
+          }`}
+        >
           {question}
         </span>
-        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-          isOpen
-            ? 'bg-island-blue/20 dark:bg-island-sky-blue/20 rotate-180'
-            : 'bg-island-blue/10 dark:bg-island-sky-blue/10'
-        }`}>
+        <div
+          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+            isOpen
+              ? 'bg-island-blue/20 dark:bg-island-sky-blue/20 rotate-180'
+              : 'bg-island-blue/10 dark:bg-island-sky-blue/10'
+          }`}
+        >
           <svg
             className={`w-4 h-4 text-island-blue dark:text-island-sky-blue`}
             fill="none"

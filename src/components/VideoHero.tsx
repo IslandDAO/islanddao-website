@@ -7,10 +7,7 @@ interface VideoHeroProps {
   videoId?: string;
 }
 
-export function VideoHero({
-  topOffset = 81,
-  videoId = 'CKJ5Eg-ivLc'
-}: VideoHeroProps) {
+export function VideoHero({ topOffset = 81, videoId = 'CKJ5Eg-ivLc' }: VideoHeroProps) {
   // YouTube embed parameters for autoplay, muted, looping video
   const embedParams = new URLSearchParams({
     autoplay: '1',

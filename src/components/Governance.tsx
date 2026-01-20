@@ -17,8 +17,8 @@ export function Governance() {
             </h2>
             <p className="text-lg max-w-3xl mx-auto leading-relaxed text-island-text-light/70 dark:text-island-text-dark/70">
               IslandDAO is governed by its community through on-chain voting powered by Realms.
-              Every member has a voice in decisions that shape our direction, from treasury allocation
-              to event planning and strategic partnerships.
+              Every member has a voice in decisions that shape our direction, from treasury
+              allocation to event planning and strategic partnerships.
             </p>
           </div>
 
@@ -39,27 +39,63 @@ export function Governance() {
           <div className="grid md:grid-cols-3 gap-4 mb-12">
             <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700">
               <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-island-blue dark:bg-island-sky-blue">
-                <svg className="w-6 h-6 text-white dark:text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <svg
+                  className="w-6 h-6 text-white dark:text-gray-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               </div>
-              <span className="font-semibold text-island-text-light dark:text-island-text-dark">On-chain voting with full transparency</span>
+              <span className="font-semibold text-island-text-light dark:text-island-text-dark">
+                On-chain voting with full transparency
+              </span>
             </div>
             <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700">
               <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-island-blue dark:bg-island-sky-blue">
-                <svg className="w-6 h-6 text-white dark:text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <svg
+                  className="w-6 h-6 text-white dark:text-gray-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               </div>
-              <span className="font-semibold text-island-text-light dark:text-island-text-dark">Community-driven proposals and initiatives</span>
+              <span className="font-semibold text-island-text-light dark:text-island-text-dark">
+                Community-driven proposals and initiatives
+              </span>
             </div>
             <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700">
               <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-island-blue dark:bg-island-sky-blue">
-                <svg className="w-6 h-6 text-white dark:text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <svg
+                  className="w-6 h-6 text-white dark:text-gray-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               </div>
-              <span className="font-semibold text-island-text-light dark:text-island-text-dark">Treasury management and fund allocation</span>
+              <span className="font-semibold text-island-text-light dark:text-island-text-dark">
+                Treasury management and fund allocation
+              </span>
             </div>
           </div>
 

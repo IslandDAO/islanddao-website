@@ -13,7 +13,7 @@ import {
   Sparkles,
   Presentation,
   Zap,
-  Megaphone
+  Megaphone,
 } from 'lucide-react';
 
 // ============================================
@@ -33,14 +33,15 @@ function HeroSection() {
 
           {/* Title */}
           <h1 className="font-brand-heading text-3xl md:text-6xl mb-6 leading-tight uppercase">
-            <span className="text-island-blue dark:text-island-text-dark">
-              IslandDAO Events
-            </span>
+            <span className="text-island-blue dark:text-island-text-dark">IslandDAO Events</span>
           </h1>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-island-tertiary dark:text-island-text-dark/90 max-w-3xl mx-auto font-medium leading-relaxed">
-            Where our network state comes to life. Throughout the year, we host month-long coworking events where Solana&apos;s most dedicated builders gather to work and collaborate, transforming villas around the world into temporary hubs of governance, innovation, and community.
+            Where our network state comes to life. Throughout the year, we host month-long coworking
+            events where Solana&apos;s most dedicated builders gather to work and collaborate,
+            transforming villas around the world into temporary hubs of governance, innovation, and
+            community.
           </p>
         </div>
       </div>
@@ -92,7 +93,7 @@ function MediaCarousel() {
                   src={item.src}
                   alt={item.alt}
                   className="w-full h-full object-cover"
-                  loading={index === 0 ? "eager" : "lazy"}
+                  loading={index === 0 ? 'eager' : 'lazy'}
                 />
               </div>
             ))}
@@ -101,16 +102,36 @@ function MediaCarousel() {
               onClick={prevSlide}
               className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
             >
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <svg
+                className="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </button>
             <button
               onClick={nextSlide}
               className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
             >
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
           </div>
@@ -132,7 +153,8 @@ function MediaCarousel() {
 
           {/* Caption */}
           <p className="text-center text-lg text-island-tertiary dark:text-island-text-dark/90 mt-6 max-w-2xl mx-auto font-medium">
-            If you want to build, grow, contribute, and connect with some of Solana&apos;s most committed creators, there is no better place to be.
+            If you want to build, grow, contribute, and connect with some of Solana&apos;s most
+            committed creators, there is no better place to be.
           </p>
         </div>
       </div>
@@ -152,34 +174,45 @@ function WorkshopsHackathonSection() {
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
             {/* Workshops Column */}
             <div className="p-8 rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700">
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-island-blue/10 dark:bg-island-sky-blue/20 flex items-center justify-center mb-6">
-                  <Presentation className="w-7 h-7 text-island-blue dark:text-island-sky-blue" />
-                </div>
+              {/* Icon */}
+              <div className="w-14 h-14 rounded-xl bg-island-blue/10 dark:bg-island-sky-blue/20 flex items-center justify-center mb-6">
+                <Presentation className="w-7 h-7 text-island-blue dark:text-island-sky-blue" />
+              </div>
 
-                <h3 className="text-2xl font-bold text-island-blue dark:text-island-sky-blue mb-4">
-                  Citizen-Led Workshops
-                </h3>
+              <h3 className="text-2xl font-bold text-island-blue dark:text-island-sky-blue mb-4">
+                Citizen-Led Workshops
+              </h3>
 
-                <p className="text-lg text-island-tertiary dark:text-island-text-dark/90 leading-relaxed mb-6">
-                  Every event features workshops led by citizens: founders, developers, designers, and contributors building across the Solana ecosystem.
-                </p>
+              <p className="text-lg text-island-tertiary dark:text-island-text-dark/90 leading-relaxed mb-6">
+                Every event features workshops led by citizens: founders, developers, designers, and
+                contributors building across the Solana ecosystem.
+              </p>
 
-                <p className="text-lg text-island-tertiary dark:text-island-text-dark/80 leading-relaxed">
-                  Sessions cover new protocols, tooling, design patterns, governance mechanisms, and technical deep-dives, with space for anyone to host their own workshop.
-                </p>
+              <p className="text-lg text-island-tertiary dark:text-island-text-dark/80 leading-relaxed">
+                Sessions cover new protocols, tooling, design patterns, governance mechanisms, and
+                technical deep-dives, with space for anyone to host their own workshop.
+              </p>
 
               {/* Quote */}
               <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                 <blockquote className="relative px-8 py-2">
-                  <svg className="absolute top-0 left-0 w-6 h-6 text-island-blue/20 dark:text-island-sky-blue/20" fill="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="absolute top-0 left-0 w-6 h-6 text-island-blue/20 dark:text-island-sky-blue/20"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <svg className="absolute bottom-0 right-0 w-6 h-6 text-island-blue/20 dark:text-island-sky-blue/20 rotate-180" fill="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="absolute bottom-0 right-0 w-6 h-6 text-island-blue/20 dark:text-island-sky-blue/20 rotate-180"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
                   <p className="text-island-blue dark:text-island-sky-blue font-medium italic">
-                    It&apos;s been a better learning experience than any conference I&apos;ve been to this year.
+                    It&apos;s been a better learning experience than any conference I&apos;ve been
+                    to this year.
                   </p>
                   <cite className="block mt-2 text-sm text-island-tertiary dark:text-island-text-dark/60 not-italic">
                     2025 attendee
@@ -190,22 +223,27 @@ function WorkshopsHackathonSection() {
 
             {/* Hackathon Column */}
             <div className="p-8 rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700">
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-island-blue/10 dark:bg-island-sky-blue/20 flex items-center justify-center mb-6">
-                  <Zap className="w-7 h-7 text-island-blue dark:text-island-sky-blue" />
-                </div>
+              {/* Icon */}
+              <div className="w-14 h-14 rounded-xl bg-island-blue/10 dark:bg-island-sky-blue/20 flex items-center justify-center mb-6">
+                <Zap className="w-7 h-7 text-island-blue dark:text-island-sky-blue" />
+              </div>
 
-                <h3 className="text-2xl font-bold text-island-blue dark:text-island-sky-blue mb-4">
-                  On-Site Hackathon
-                </h3>
+              <h3 className="text-2xl font-bold text-island-blue dark:text-island-sky-blue mb-4">
+                On-Site Hackathon
+              </h3>
 
-                <p className="text-lg text-island-tertiary dark:text-island-text-dark/90 leading-relaxed mb-6">
-                  IslandDAO hosts an on-site hackathon each year with prize pools supported by ecosystem partners. Teams build throughout the residency, supported by domain experts at the villa who offer mentorship, code reviews, design feedback, and strategic guidance.
-                </p>
+              <p className="text-lg text-island-tertiary dark:text-island-text-dark/90 leading-relaxed mb-6">
+                IslandDAO hosts an on-site hackathon each year with prize pools supported by
+                ecosystem partners. Teams build throughout the residency, supported by domain
+                experts at the villa who offer mentorship, code reviews, design feedback, and
+                strategic guidance.
+              </p>
 
-                <p className="text-lg text-island-tertiary dark:text-island-text-dark/80 leading-relaxed">
-                  The hackathon is intentionally integrated into the rhythm of the event, giving residents the time, space, and support to take ideas from idea to prototype to launch.
-                </p>
+              <p className="text-lg text-island-tertiary dark:text-island-text-dark/80 leading-relaxed">
+                The hackathon is intentionally integrated into the rhythm of the event, giving
+                residents the time, space, and support to take ideas from idea to prototype to
+                launch.
+              </p>
 
               {/* Visual element */}
               <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
@@ -231,24 +269,27 @@ function WorkshopsHackathonSection() {
 
           {/* Launchathon - Full width section */}
           <div className="mt-16 p-8 md:p-10 rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700">
-              <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10">
-                {/* Icon */}
-                <div className="w-16 h-16 rounded-xl bg-island-blue/10 dark:bg-island-sky-blue/20 flex items-center justify-center flex-shrink-0">
-                  <Megaphone className="w-8 h-8 text-island-blue dark:text-island-sky-blue" />
-                </div>
+            <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10">
+              {/* Icon */}
+              <div className="w-16 h-16 rounded-xl bg-island-blue/10 dark:bg-island-sky-blue/20 flex items-center justify-center flex-shrink-0">
+                <Megaphone className="w-8 h-8 text-island-blue dark:text-island-sky-blue" />
+              </div>
 
-                {/* Content */}
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-bold text-island-blue dark:text-island-sky-blue mb-4">
-                    The Launchathon
-                  </h3>
+              {/* Content */}
+              <div className="flex-1">
+                <h3 className="text-2xl md:text-3xl font-bold text-island-blue dark:text-island-sky-blue mb-4">
+                  The Launchathon
+                </h3>
 
-                  <p className="text-island-tertiary dark:text-island-text-dark/90 leading-relaxed mb-4 text-lg">
-                    Unique to IslandDAO, the Launchathon is a community-driven moment where projects go live with the support of the entire villa.
-                  </p>
+                <p className="text-island-tertiary dark:text-island-text-dark/90 leading-relaxed mb-4 text-lg">
+                  Unique to IslandDAO, the Launchathon is a community-driven moment where projects
+                  go live with the support of the entire villa.
+                </p>
 
                 <p className="text-lg text-island-tertiary dark:text-island-text-dark/80 leading-relaxed">
-                  Builders share what they&apos;ve created, receive immediate feedback, and use the momentum and visibility generated by the event to launch tokens, apps, tools, or updates directly into the ecosystem.
+                  Builders share what they&apos;ve created, receive immediate feedback, and use the
+                  momentum and visibility generated by the event to launch tokens, apps, tools, or
+                  updates directly into the ecosystem.
                 </p>
               </div>
             </div>
@@ -266,32 +307,38 @@ const whyAttendReasons = [
   {
     icon: Palmtree,
     title: 'Paradise Locations',
-    description: 'Work from stunning luxury villas in the most beautiful locations around the world.',
+    description:
+      'Work from stunning luxury villas in the most beautiful locations around the world.',
   },
   {
     icon: Users,
     title: 'Network with Builders',
-    description: 'Connect with top Solana developers, founders, and thought leaders in the ecosystem.',
+    description:
+      'Connect with top Solana developers, founders, and thought leaders in the ecosystem.',
   },
   {
     icon: Lightbulb,
     title: 'Learn & Collaborate',
-    description: 'Participate in workshops, hackathons, and collaborative sessions with industry experts.',
+    description:
+      'Participate in workshops, hackathons, and collaborative sessions with industry experts.',
   },
   {
     icon: Trophy,
     title: 'Win Prizes',
-    description: 'Compete in hackathons with substantial prize pools and gain recognition for your work.',
+    description:
+      'Compete in hackathons with substantial prize pools and gain recognition for your work.',
   },
   {
     icon: Heart,
     title: 'Wellness Activities',
-    description: 'Balance work with yoga, meditation, fitness activities, and healthy lifestyle experiences.',
+    description:
+      'Balance work with yoga, meditation, fitness activities, and healthy lifestyle experiences.',
   },
   {
     icon: Vote,
     title: 'Governance Participation',
-    description: 'Participate in on-chain governance voting to help shape event decisions and activities.',
+    description:
+      'Participate in on-chain governance voting to help shape event decisions and activities.',
   },
 ];
 
@@ -307,9 +354,7 @@ function WhyAttendSection() {
             </span>
           </div>
           <h2 className="font-brand-heading text-3xl md:text-5xl mb-6 uppercase">
-            <span className="text-island-blue dark:text-island-text-dark">
-              Why Attend?
-            </span>
+            <span className="text-island-blue dark:text-island-text-dark">Why Attend?</span>
           </h2>
           <p className="text-lg text-island-tertiary dark:text-island-text-dark/90 max-w-2xl mx-auto">
             IslandDAO events offer a unique blend of productivity, networking, and adventure.
@@ -426,18 +471,20 @@ function HackathonWinnersSection() {
             </span>
           </div>
           <h2 className="font-brand-heading text-3xl md:text-5xl mb-6 uppercase">
-            <span className="text-island-blue dark:text-island-text-dark">
-              Hackathon Winners
-            </span>
+            <span className="text-island-blue dark:text-island-text-dark">Hackathon Winners</span>
           </h2>
           <p className="text-lg text-island-tertiary dark:text-island-text-dark/90 max-w-2xl mx-auto mb-8">
             Projects built and launched at IslandDAO events
           </p>
           {/* Total prizes stat */}
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-island-blue/5 dark:bg-island-sky-blue/10 border border-island-blue/20 dark:border-island-sky-blue/20">
-            <span className="text-3xl md:text-4xl font-bold text-island-blue dark:text-island-sky-blue">$200K+</span>
+            <span className="text-3xl md:text-4xl font-bold text-island-blue dark:text-island-sky-blue">
+              $200K+
+            </span>
             <span className="text-island-tertiary dark:text-island-text-dark/80 text-left text-sm">
-              in prizes won by<br />IslandDAO projects
+              in prizes won by
+              <br />
+              IslandDAO projects
             </span>
           </div>
         </div>
@@ -479,8 +526,18 @@ function HackathonWinnersSection() {
                 onClick={prevSlide}
                 className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
-                <svg className="w-5 h-5 text-island-blue dark:text-island-sky-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-5 h-5 text-island-blue dark:text-island-sky-blue"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
               </button>
               <div className="flex items-center gap-2">
@@ -500,8 +557,18 @@ function HackathonWinnersSection() {
                 onClick={nextSlide}
                 className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
-                <svg className="w-5 h-5 text-island-blue dark:text-island-sky-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-5 h-5 text-island-blue dark:text-island-sky-blue"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
             </div>
@@ -524,7 +591,8 @@ const applicationSteps = [
   {
     step: 2,
     title: 'Apply When Applications Open',
-    description: 'We post a call for applications before each event. Apply through the official form to tell us about yourself and your goals.',
+    description:
+      'We post a call for applications before each event. Apply through the official form to tell us about yourself and your goals.',
   },
   {
     step: 3,
@@ -534,7 +602,8 @@ const applicationSteps = [
   {
     step: 4,
     title: 'Book & Attend',
-    description: 'Secure your spot, book your own travel and accommodation, and join us for an unforgettable experience.',
+    description:
+      'Secure your spot, book your own travel and accommodation, and join us for an unforgettable experience.',
   },
 ];
 
@@ -566,10 +635,7 @@ function ApplyingSection() {
             <div className="absolute left-6 top-[3.5rem] bottom-[5rem] w-0.5 bg-gradient-to-b from-island-blue via-island-secondary to-island-light-blue dark:from-island-sky-blue dark:via-island-blue dark:to-island-light-blue"></div>
 
             {applicationSteps.map((step) => (
-              <div
-                key={step.step}
-                className="relative flex items-center gap-6 mb-8"
-              >
+              <div key={step.step} className="relative flex items-center gap-6 mb-8">
                 {/* Step number */}
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-island-blue dark:bg-island-sky-blue text-white dark:text-gray-900 flex items-center justify-center font-bold text-lg shadow-lg z-10">
                   {step.step}
@@ -666,7 +732,11 @@ const allEvents: EventItem[] = [
 function EventCard({ event }: { event: EventItem }) {
   const CardWrapper = ({ children }: { children: React.ReactNode }) => {
     if (event.isPast && event.slug) {
-      return <a href={`/events/${event.slug}`} className="block group">{children}</a>;
+      return (
+        <a href={`/events/${event.slug}`} className="block group">
+          {children}
+        </a>
+      );
     }
     return <>{children}</>;
   };
@@ -676,103 +746,147 @@ function EventCard({ event }: { event: EventItem }) {
       <div>
         {/* Card */}
         <div className="overflow-hidden rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700 shadow-lg">
-        {/* Image */}
-        <div className="aspect-[4/3] relative overflow-hidden">
-          {event.image ? (
-            <img
-              src={event.image}
-              alt={event.title}
-              className="absolute inset-0 w-full h-full object-cover"
-              loading="lazy"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-island-blue/20 to-island-secondary/20 dark:from-island-surface-variant-dark dark:to-island-surface-dark">
-              <Palmtree className="w-16 h-16 text-island-blue dark:text-island-sky-blue" />
-            </div>
-          )}
+          {/* Image */}
+          <div className="aspect-[4/3] relative overflow-hidden">
+            {event.image ? (
+              <img
+                src={event.image}
+                alt={event.title}
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-island-blue/20 to-island-secondary/20 dark:from-island-surface-variant-dark dark:to-island-surface-dark">
+                <Palmtree className="w-16 h-16 text-island-blue dark:text-island-sky-blue" />
+              </div>
+            )}
 
-          {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            {/* Overlay gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
-          {/* Status badge */}
-          <div className={`absolute top-3 right-3 px-3 py-1.5 rounded-full shadow-lg ${
-            event.isPast
-              ? 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600'
-              : 'bg-island-blue dark:bg-island-sky-blue'
-          }`}>
-            <span className={`text-sm font-semibold ${
-              event.isPast
-                ? 'text-island-tertiary dark:text-island-text-dark/80'
-                : 'text-white dark:text-gray-900'
-            }`}>
-              {event.isPast ? 'Past Event' : 'Upcoming'}
-            </span>
-          </div>
-
-          {/* Date badge */}
-          <div className="absolute bottom-3 left-3 px-3 py-1.5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-lg">
-            <span className="text-sm font-semibold text-island-blue dark:text-island-sky-blue">
-              {event.date}
-            </span>
-          </div>
-        </div>
-
-        {/* Content */}
-        <div className="p-5">
-          <h3 className="text-lg font-bold text-island-blue dark:text-island-sky-blue mb-1">
-            {event.title}
-          </h3>
-          <div className="flex items-center text-island-tertiary dark:text-island-text-dark/80 text-sm mb-3">
-            <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            {event.location}
-          </div>
-
-          {/* Stats for past events */}
-          {event.isPast && event.stats && (
-            <div className="flex gap-4 text-sm">
-              {event.stats.attendees && (
-                <div className="flex items-center text-island-tertiary dark:text-island-text-dark/80">
-                  <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  {event.stats.attendees} attendees
-                </div>
-              )}
-              {event.stats.projects && (
-                <div className="flex items-center text-island-tertiary dark:text-island-text-dark/80">
-                  <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
-                  {event.stats.projects} projects
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* View details link for past events */}
-          {event.isPast && event.slug && (
-            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-white/10">
-              <span className="text-sm font-semibold text-island-blue dark:text-island-sky-blue group-hover:underline flex items-center">
-                View Event Details & Gallery
-                <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+            {/* Status badge */}
+            <div
+              className={`absolute top-3 right-3 px-3 py-1.5 rounded-full shadow-lg ${
+                event.isPast
+                  ? 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600'
+                  : 'bg-island-blue dark:bg-island-sky-blue'
+              }`}
+            >
+              <span
+                className={`text-sm font-semibold ${
+                  event.isPast
+                    ? 'text-island-tertiary dark:text-island-text-dark/80'
+                    : 'text-white dark:text-gray-900'
+                }`}
+              >
+                {event.isPast ? 'Past Event' : 'Upcoming'}
               </span>
             </div>
-          )}
+
+            {/* Date badge */}
+            <div className="absolute bottom-3 left-3 px-3 py-1.5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-lg">
+              <span className="text-sm font-semibold text-island-blue dark:text-island-sky-blue">
+                {event.date}
+              </span>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="p-5">
+            <h3 className="text-lg font-bold text-island-blue dark:text-island-sky-blue mb-1">
+              {event.title}
+            </h3>
+            <div className="flex items-center text-island-tertiary dark:text-island-text-dark/80 text-sm mb-3">
+              <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              {event.location}
+            </div>
+
+            {/* Stats for past events */}
+            {event.isPast && event.stats && (
+              <div className="flex gap-4 text-sm">
+                {event.stats.attendees && (
+                  <div className="flex items-center text-island-tertiary dark:text-island-text-dark/80">
+                    <svg
+                      className="w-4 h-4 mr-1.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    {event.stats.attendees} attendees
+                  </div>
+                )}
+                {event.stats.projects && (
+                  <div className="flex items-center text-island-tertiary dark:text-island-text-dark/80">
+                    <svg
+                      className="w-4 h-4 mr-1.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                      />
+                    </svg>
+                    {event.stats.projects} projects
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* View details link for past events */}
+            {event.isPast && event.slug && (
+              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-white/10">
+                <span className="text-sm font-semibold text-island-blue dark:text-island-sky-blue group-hover:underline flex items-center">
+                  View Event Details & Gallery
+                  <svg
+                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
       </div>
     </CardWrapper>
   );
 }
 
 function EventsListSection() {
-  const upcomingEvents = allEvents.filter(e => !e.isPast);
-  const pastEvents = allEvents.filter(e => e.isPast);
+  const upcomingEvents = allEvents.filter((e) => !e.isPast);
+  const pastEvents = allEvents.filter((e) => e.isPast);
 
   return (
     <section className="py-24 bg-island-bg-light dark:bg-island-bg-dark relative no-format-detection">
@@ -790,7 +904,8 @@ function EventsListSection() {
             </span>
           </h2>
           <p className="text-lg text-island-tertiary dark:text-island-text-dark/90 max-w-2xl mx-auto">
-            Explore upcoming adventures and relive past experiences through stats, photos, and videos.
+            Explore upcoming adventures and relive past experiences through stats, photos, and
+            videos.
           </p>
         </div>
 

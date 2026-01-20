@@ -1,18 +1,21 @@
-import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { EventsPageContent } from "@/components/EventsPageContent";
+import type { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { EventsPageContent } from '@/components/EventsPageContent';
 
 export const metadata: Metadata = {
-  title: "Events",
-  description: "Join IslandDAO's month-long coworking events in paradise locations around the world. Connect with Web3 builders, participate in workshops, and experience the future of decentralized collaboration.",
+  title: 'Events',
+  description:
+    "Join IslandDAO's month-long coworking events in paradise locations around the world. Connect with Web3 builders, participate in workshops, and experience the future of decentralized collaboration.",
   openGraph: {
-    title: "Events | IslandDAO",
-    description: "Join IslandDAO's month-long coworking events in paradise locations around the world. Connect with Web3 builders, participate in workshops, and experience the future of decentralized collaboration.",
+    title: 'Events | IslandDAO',
+    description:
+      "Join IslandDAO's month-long coworking events in paradise locations around the world. Connect with Web3 builders, participate in workshops, and experience the future of decentralized collaboration.",
   },
   twitter: {
-    title: "Events | IslandDAO",
-    description: "Join IslandDAO's month-long coworking events in paradise locations around the world.",
+    title: 'Events | IslandDAO',
+    description:
+      "Join IslandDAO's month-long coworking events in paradise locations around the world.",
   },
 };
 

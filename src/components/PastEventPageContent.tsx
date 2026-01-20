@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { MapPin, Calendar, Presentation, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
 
@@ -32,15 +33,11 @@ export function PastEventPageContent({ event }: PastEventProps) {
   };
 
   const goToPrevious = useCallback(() => {
-    setCurrentImageIndex((prev) =>
-      prev === 0 ? event.galleryImages.length - 1 : prev - 1
-    );
+    setCurrentImageIndex((prev) => (prev === 0 ? event.galleryImages.length - 1 : prev - 1));
   }, [event.galleryImages.length]);
 
   const goToNext = useCallback(() => {
-    setCurrentImageIndex((prev) =>
-      prev === event.galleryImages.length - 1 ? 0 : prev + 1
-    );
+    setCurrentImageIndex((prev) => (prev === event.galleryImages.length - 1 ? 0 : prev + 1));
   }, [event.galleryImages.length]);
 
   // Keyboard navigation
@@ -67,11 +64,7 @@ export function PastEventPageContent({ event }: PastEventProps) {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px]">
         <div className="absolute inset-0">
-          <img
-            src={event.heroImage}
-            alt={event.title}
-            className="w-full h-full object-cover"
-          />
+          <img src={event.heroImage} alt={event.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
 
@@ -87,7 +80,9 @@ export function PastEventPageContent({ event }: PastEventProps) {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
-              <span>{event.location}, {event.country}</span>
+              <span>
+                {event.location}, {event.country}
+              </span>
             </div>
           </div>
         </div>
@@ -128,7 +123,9 @@ export function PastEventPageContent({ event }: PastEventProps) {
                 {event.highlights.map((highlight, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-island-blue dark:bg-island-sky-blue mt-2 flex-shrink-0" />
-                    <span className="text-island-tertiary dark:text-island-text-dark/80">{highlight}</span>
+                    <span className="text-island-tertiary dark:text-island-text-dark/80">
+                      {highlight}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -174,15 +171,20 @@ export function PastEventPageContent({ event }: PastEventProps) {
       {/* Back to Events CTA */}
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <a
+          <Link
             href="/events"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-island-blue dark:bg-island-sky-blue text-white dark:text-gray-900 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
             Back to Events
-          </a>
+          </Link>
         </div>
       </section>
 

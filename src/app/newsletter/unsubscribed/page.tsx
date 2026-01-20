@@ -21,13 +21,11 @@ export default function NewsletterUnsubscribedPage() {
             </svg>
           </div>
 
-          <h1 className="text-2xl font-bold gradient-text mb-4">
-            Unsubscribed
-          </h1>
+          <h1 className="text-2xl font-bold gradient-text mb-4">Unsubscribed</h1>
 
           <p className="text-island-tertiary dark:text-island-text-dark/80 mb-6">
-            You&apos;ve been unsubscribed from the IslandDAO newsletter. We&apos;re sorry
-            to see you go! You can always resubscribe if you change your mind.
+            You&apos;ve been unsubscribed from the IslandDAO newsletter. We&apos;re sorry to see you
+            go! You can always resubscribe if you change your mind.
           </p>
 
           <Link
