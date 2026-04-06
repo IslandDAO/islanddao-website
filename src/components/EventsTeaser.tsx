@@ -18,7 +18,7 @@ const events: Event[] = [
     id: 1,
     title: 'IslandDAO Thailand',
     location: 'Koh Samui, Thailand',
-    date: '1st June -  1st July 2026',
+    date: '3 June -  28 June 2026',
     image: '/images/thailand-sm.jpg', // Add your event image here
     announced: false, // Change to true when you want to reveal this event
   },
