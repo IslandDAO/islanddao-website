@@ -677,6 +677,8 @@ interface EventItem {
   image?: string;
   isPast: boolean;
   slug?: string;
+  registrationOpen?: boolean;
+  registrationUrl?: string;
   stats?: {
     attendees?: number;
     projects?: number;
@@ -691,6 +693,8 @@ const allEvents: EventItem[] = [
     date: 'June 2026',
     image: '/images/thailand-sm.jpg',
     isPast: false,
+    registrationOpen: true,
+    registrationUrl: 'https://v4.islanddao.org',
   },
   {
     id: 2,
@@ -738,6 +742,13 @@ function EventCard({ event }: { event: EventItem }) {
         </a>
       );
     }
+    if (!event.isPast && event.registrationOpen && event.registrationUrl) {
+      return (
+        <a href={event.registrationUrl} target="_blank" rel="noopener noreferrer" className="block group">
+          {children}
+        </a>
+      );
+    }
     return <>{children}</>;
   };
 
@@ -745,14 +756,14 @@ function EventCard({ event }: { event: EventItem }) {
     <CardWrapper>
       <div>
         {/* Card */}
-        <div className="overflow-hidden rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700 shadow-lg">
+        <div className={`overflow-hidden rounded-2xl bg-white dark:bg-island-surface-dark border shadow-lg transition-all duration-300 ${event.registrationOpen ? 'border-island-blue dark:border-island-sky-blue' : 'border-gray-200 dark:border-gray-700'}`}>
           {/* Image */}
           <div className="aspect-[4/3] relative overflow-hidden">
             {event.image ? (
               <img
                 src={event.image}
                 alt={event.title}
-                className="absolute inset-0 w-full h-full object-cover"
+                className={`absolute inset-0 w-full h-full object-cover ${event.registrationOpen ? 'group-hover:scale-105 transition-transform duration-500' : ''}`}
                 loading="lazy"
               />
             ) : (
@@ -763,6 +774,13 @@ function EventCard({ event }: { event: EventItem }) {
 
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+
+            {/* Registration open badge */}
+            {event.registrationOpen && (
+              <div className="absolute top-3 left-3 bg-green-500 px-3 py-1.5 rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white uppercase tracking-wide">Registration Open</span>
+              </div>
+            )}
 
             {/* Status badge */}
             <div
@@ -853,6 +871,15 @@ function EventCard({ event }: { event: EventItem }) {
                     {event.stats.projects} projects
                   </div>
                 )}
+              </div>
+            )}
+
+            {/* Register Now button for open registration */}
+            {event.registrationOpen && (
+              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-white/10">
+                <div className="w-full px-6 py-3 rounded-xl bg-island-blue dark:bg-island-sky-blue text-white dark:text-gray-900 font-bold text-center text-sm">
+                  Register Now
+                </div>
               </div>
             )}
 

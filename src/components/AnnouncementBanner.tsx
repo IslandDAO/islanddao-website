@@ -10,8 +10,8 @@ interface AnnouncementBannerProps {
 }
 
 export function AnnouncementBanner({
-  message = '🎉 New events coming soon! Stay tuned for exciting announcements in 2025.',
-  link = '#events',
+  message = 'IslandDAO V4 tickets and registrations are now available!',
+  link = 'https://v4.islanddao.org',
   dismissible = true,
   onDismiss,
 }: AnnouncementBannerProps) {
@@ -33,6 +33,8 @@ export function AnnouncementBanner({
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
+    } else if (link.startsWith('http')) {
+      window.open(link, '_blank', 'noopener,noreferrer');
     } else {
       window.location.href = link;
     }

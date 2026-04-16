@@ -45,6 +45,14 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center space-x-3 ml-auto">
+            <a
+              href="https://app.islanddao.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center px-4 py-2 rounded-lg bg-island-blue text-white text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
+            >
+              Launch App
+            </a>
             <ThemeToggle />
 
             {/* Mobile Menu Button */}
@@ -89,6 +97,15 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <a
+              href="https://app.islanddao.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block w-full text-left px-4 py-3 rounded-lg bg-island-blue text-white font-medium transition-all"
+            >
+              Launch App
+            </a>
           </nav>
         )}
       </div>
