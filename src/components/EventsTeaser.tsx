@@ -10,6 +10,8 @@ interface Event {
   date?: string;
   image?: string;
   announced: boolean;
+  registrationOpen?: boolean;
+  registrationUrl?: string;
 }
 
 // Configure your events here - set announced: true when ready to reveal
@@ -34,45 +36,62 @@ const events: Event[] = [
 
 function EventCard({ event }: { event: Event }) {
   if (!event.announced) {
-    // Teaser/Coming Soon card
-    return (
-      <div>
-        <div className="overflow-hidden rounded-2xl bg-white dark:bg-island-surface-dark border border-gray-200 dark:border-gray-700 p-6">
-          {/* Image container */}
-          <div className="aspect-[4/3] relative overflow-hidden rounded-xl">
-            {event.image ? (
-              <img
-                src={event.image}
-                alt={event.title || 'Event'}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center bg-island-blue/10 dark:bg-island-sky-blue/10 rounded-xl">
-                <span className="text-7xl">🏝️</span>
-              </div>
-            )}
-            {/* Overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent rounded-xl"></div>
-          </div>
+    const cardContent = (
+      <div className={`overflow-hidden rounded-2xl bg-white dark:bg-island-surface-dark border p-6 transition-all duration-300 ${event.registrationOpen ? 'border-island-blue dark:border-island-sky-blue hover:border-island-blue/70 dark:hover:border-island-sky-blue/70 group' : 'border-gray-200 dark:border-gray-700'}`}>
+        {/* Image container */}
+        <div className="aspect-[4/3] relative overflow-hidden rounded-xl">
+          {event.image ? (
+            <img
+              src={event.image}
+              alt={event.title || 'Event'}
+              className={`absolute inset-0 w-full h-full object-cover ${event.registrationOpen ? 'group-hover:scale-105 transition-transform duration-500' : ''}`}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-island-blue/10 dark:bg-island-sky-blue/10 rounded-xl">
+              <span className="text-7xl">🏝️</span>
+            </div>
+          )}
+          {/* Overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent rounded-xl"></div>
 
-          {/* Content */}
-          <div className="pt-4">
-            <h3 className="text-xl font-bold text-island-blue dark:text-island-sky-blue mb-2">
-              {event.title || 'Event'}
-            </h3>
-            {event.location && (
-              <p className="text-sm text-island-text-light/70 dark:text-island-text-dark/70 mb-1">
-                {event.location}
-              </p>
-            )}
-            {event.date && (
-              <p className="text-sm text-island-text-light/70 dark:text-island-text-dark/70">
-                {event.date}
-              </p>
-            )}
-          </div>
+          {/* Registration open badge */}
+          {event.registrationOpen && (
+            <div className="absolute top-3 left-3 bg-green-500 px-3 py-1.5 rounded-full">
+              <span className="text-xs font-bold text-white uppercase tracking-wide">Registration Open</span>
+            </div>
+          )}
+        </div>
+
+        {/* Content */}
+        <div className="pt-4">
+          <h3 className="text-xl font-bold text-island-blue dark:text-island-sky-blue mb-2">
+            {event.title || 'Event'}
+          </h3>
+          {event.location && (
+            <p className="text-sm text-island-text-light/70 dark:text-island-text-dark/70 mb-1">
+              {event.location}
+            </p>
+          )}
+          {event.date && (
+            <p className="text-sm text-island-text-light/70 dark:text-island-text-dark/70 mb-4">
+              {event.date}
+            </p>
+          )}
+          {event.registrationOpen && (
+            <div className="w-full px-8 py-4 rounded-xl bg-island-blue dark:bg-island-sky-blue text-white dark:text-gray-900 font-bold text-center">
+              Register Now
+            </div>
+          )}
         </div>
       </div>
+    );
+
+    return event.registrationOpen && event.registrationUrl ? (
+      <a href={event.registrationUrl} target="_blank" rel="noopener noreferrer">
+        {cardContent}
+      </a>
+    ) : (
+      <div>{cardContent}</div>
     );
   }
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { Header } from '@/components/Header';
-// import { AnnouncementBanner } from "@/components/AnnouncementBanner"; // Uncomment when needed
+import { AnnouncementBanner } from '@/components/AnnouncementBanner';
 import { VideoHero } from '@/components/VideoHero';
 import { EventsTeaser } from '@/components/EventsTeaser';
 import { PerksNFT } from '@/components/PerksNFT';
@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      {/* <AnnouncementBanner onDismiss={() => {}} /> */}
+      <AnnouncementBanner />
 
       {/* Hero Section */}
       <main style={{ paddingTop: `${topOffset}px` }}>
