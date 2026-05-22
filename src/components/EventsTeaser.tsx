@@ -12,6 +12,7 @@ interface Event {
   announced: boolean;
   registrationOpen?: boolean;
   registrationUrl?: string;
+  eventUrl?: string;
 }
 
 // Configure your events here - set announced: true when ready to reveal
@@ -21,8 +22,9 @@ const events: Event[] = [
     title: 'IslandDAO Thailand',
     location: 'Koh Samui, Thailand',
     date: '3 June -  28 June 2026',
-    image: '/images/thailand-sm.jpg', // Add your event image here
-    announced: false, // Change to true when you want to reveal this event
+    image: '/images/thailand-sm.jpg',
+    announced: false,
+    eventUrl: 'https://v4.islanddao.org',
   },
   {
     id: 2,
@@ -86,8 +88,12 @@ function EventCard({ event }: { event: Event }) {
       </div>
     );
 
-    return event.registrationOpen && event.registrationUrl ? (
-      <a href={event.registrationUrl} target="_blank" rel="noopener noreferrer">
+    const href = event.registrationOpen && event.registrationUrl
+      ? event.registrationUrl
+      : event.eventUrl;
+
+    return href ? (
+      <a href={href} target="_blank" rel="noopener noreferrer">
         {cardContent}
       </a>
     ) : (
