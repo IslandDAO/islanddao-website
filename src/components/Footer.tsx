@@ -108,9 +108,15 @@ export function Footer() {
             style={{ color: 'var(--color-text-secondary)' }}
           >
             <div>© 2025 IslandDAO. All rights reserved.</div>
-            <div>
-              <Link href="/brand" className="transition-colors hover:opacity-80">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+              <Link href="/branding" className="transition-colors hover:opacity-80">
                 Brand Guidelines
+              </Link>
+              <Link href="/terms" className="transition-colors hover:opacity-80">
+                Terms of Service
+              </Link>
+              <Link href="/privacy" className="transition-colors hover:opacity-80">
+                Privacy Policy
               </Link>
             </div>
           </div>
